@@ -8,7 +8,7 @@ wform.addEventListener('submit',(e)=>{
     e.preventDefault()
     message.textContent = 'loading....'
 message1.textContent = ''
-    fetch('http://localhost:3000/weather?address='+serch.value).then((response)=>{
+    fetch('/weather?address='+serch.value).then((response)=>{
     response.json().then((data)=>{
         console.log(data)
         if(data.error) {
