@@ -13,7 +13,8 @@ const weather = (lat,long,callback) => {
             callback(undefined,{
                 type : current.weather_descriptions[0],
                 temperature,
-                feelslike
+                feelslike,
+                humidity
             })
             console.log('--------'+humidity)
             console.log(current.weather_descriptions[0]+'it is currently' + temperature +' but fells like' +feelslike)
