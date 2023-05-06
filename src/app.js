@@ -79,7 +79,7 @@ app.get('/weather', (req, res) => {
                 temperature,
                 feelslike,
                 name,   
-                title: type + 'it is currently' + temperature + ' but fells like' + feelslike
+                title: type + 'it is currently' + temperature + ' but feels like' + feelslike
             })
 
         })
