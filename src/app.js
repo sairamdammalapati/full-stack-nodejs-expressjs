@@ -68,7 +68,7 @@ app.get('/weather', (req, res) => {
                error
             })
         }
-        weather(latitude, longitude, (error, { type, temperature, feelslike} = {}) => {
+        weather(latitude, longitude, (error, { type, temperature, feelslike,humidity} = {}) => {
             if (error) {
                 return res.send({
                     error
@@ -78,8 +78,9 @@ app.get('/weather', (req, res) => {
                 type,   
                 temperature,
                 feelslike,
-                name,   
-                title: type + 'it is currently' + temperature + ' but feels like' + feelslike
+                name,
+                humidity,   
+                title: 'it is like '+type + '.current temperature is:' + temperature + ' but feels like:' + feelslike+' and humidity is:'+humidity
             })
 
         })
